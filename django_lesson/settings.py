@@ -29,7 +29,7 @@ SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 
 ALLOWED_HOSTS = [
-    'stuffy.pythonanywhere.com',
+    'stuffy0.pythonanywhere.com',
 ]
 
 
@@ -82,10 +82,10 @@ WSGI_APPLICATION = 'django_lesson.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'stuffy$stuffy$default',
-        'USER': 'stuffy',
+        'NAME': 'stuffy0$stuffy0$default',
+        'USER': 'stuffy0',
         'PASSWORD': os.getenv('MYSQL_PASSWORD'),
-        'HOST': 'stuffy.mysql.pythonanywhere-services.com',
+        'HOST': 'stuffy0.mysql.pythonanywhere-services.com',
         'OPTIONS': {
             'init_command': "SET NAMES 'utf8mb4';SET sql_mode='STRICT_TRANS_TABLES'",
             'charset': 'utf8mb4',
