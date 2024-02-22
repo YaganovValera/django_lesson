@@ -1,0 +1,36 @@
+{% extends 'lessonapp/base.html' %}
+
+{% block title %}Список продуктов{% endblock %}
+
+{% block content %}
+
+<h1> Продукты </h1>
+<div class="table-wrapper">
+    <table border="1">
+        <thead>
+            <tr>
+                <th>№</th>
+                <th>Название</th>
+                <th>Цена</th>
+                <th>Фото</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for product in products %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td class="name_product">{{ product.name_product }}</td>
+                <td>{{ product.price_product }}</td>
+                <td>
+                    {% if product.img_product %}
+                        <img src="{{ product.img_product.url }}" alt="{{ product.name_product }}">
+                    {% else %}
+                        <a class="upload-link" href="{% url 'upload_photo' pk_products=product.pk %}">Загрузить фото</a>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'lessonapp/base.html' %}
+
+{% block title %}Список пользователей{% endblock %}
+
+{% block content %}
+
+<h1> Пользователи </h1>
+<div class="table-wrapper">
+    <table border="1">
+        <thead>
+            <tr>
+                <th>№</th>
+                <th>Имя</th>
+                <th>Телефон</th>
+                <th>Заказы пользователя</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td class="name_product">{{ user.name }}</td>
+                <td>{{ user.phone }}</td>
+                <td>
+                  <a class="upload-link" href="{% url 'user_orders' pk_user=user.pk %}">Смотреть</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

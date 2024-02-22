@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <title>{% block title %}Базовая страница{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="main-menu">
+                <li><a href="{% url 'base_page' %}">Главное меню</a></li>
+                <li><a href="{% url 'show_products' %}">Список товаров</a></li>
+                <li><a href="{% url 'show_users' %}">Список заказов</a></li>
+                <li id="user-actions">
+                    {% if user.is_authenticated %}
+                        <span>Добро пожаловать, {{ user.username }}</span>
+                    {% else %}
+                        <a href="{% url 'login' %}">Войти</a>
+                        <a href="{% url 'register' %}">Зарегистрироваться</a>
+                    {% endif %}
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+</body>
+
+
+</html>

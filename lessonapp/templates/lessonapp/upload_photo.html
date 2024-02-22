@@ -1,0 +1,25 @@
+{% extends 'lessonapp/base.html' %}
+
+{% block title %}Добавление фотографии{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <h3>Информация о продукте: </h3>
+        <div class="product-info">
+            <p><strong>Название:</strong> {{ product.name_product }}</p>
+            <p><strong>Описание:</strong> {{ product.description_product }}</p>
+            <p><strong>Цена:</strong> {{ product.price_product }}</p>
+            <p><strong>Количество на складе:</strong> {{ product.number_product }}</p>
+        </div>
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="file" name="img_product" class="form-control-file" required>
+            </div>
+            <button type="submit">Загрузить фото</button>
+        </form>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,190 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* ------------------------ Шапка ------------------------------*/
+header {
+    background-color: #333;
+    padding: 5px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+header nav ul li a {
+    padding: 8px 15px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffd700;
+    background-color: #555;
+}
+
+/* ------------------------ Заказы пользователя ------------------------------*/
+.period-header {
+    margin-top: 20px;
+}
+
+.order-container {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+.order-item {
+    font-weight: bold;
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.product-list {
+    margin: 0;
+    padding: 0;
+}
+
+.product-item {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+.no-orders {
+    color: #666;
+}
+
+/* ------------------------ Таблица продуктов ------------------------------*/
+
+.table-wrapper {
+    text-align: center;
+    margin: 0 auto;
+    width: 60%;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.name_product{
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+table th:nth-child(1) {
+    width: 5%;
+}
+
+table th:nth-child(2) {
+    width: 30%;
+}
+
+table th:nth-child(3) {
+    width: 15%;
+}
+
+table th:nth-child(4) {
+    width: 20%;
+}
+
+table td img {
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.upload-link {
+    display: block;
+    text-align: center;
+    padding: 6px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    width: 120px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.upload-link:hover {
+    background-color: #45a049;
+}
+
+/*------------------------ Форма для загрузки фото -------------------------*/
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.product-info {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control-file {
+    display: block;
+    width: 60%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+button[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
